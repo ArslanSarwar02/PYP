@@ -86,7 +86,7 @@ else{
                         <input type="text" class="form-control" placeholder="country" value="">
                     </div>
                     <div class="col-md-6"><label class="labels">
-                            State/Region
+                            State/Region welcome to pakistan
                         </label>
                         <input type="text" class="form-control" value="" placeholder="state"
                         ></div>
