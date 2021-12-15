@@ -1,6 +1,6 @@
 <?php
 if(isset($_POST['login'])){
-include_once PRIVATE_PATH.'/request_check.php';
+include_once '../includes/request_check.php';
 //$email = "";
 //performing validation to prevent extra spaces and html characters
         $email = filter_string($_POST['email']);

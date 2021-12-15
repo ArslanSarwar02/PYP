@@ -1,15 +1,13 @@
 <?php
 //session_start();
 if (!isset($is_access)){
-    header('location:../index.php');
+    header('location:../requests.php');
 }
 ?>
-
 <html  lang="en">
 <head>
-    <title><?php echo "TWPS - ". $title ?: "TWPS"  ;?></title>
+    <title><?php echo "Pick Your Part - ". $title ?: "Pick Your Part"  ;?></title>
     <script src="<?php echo node_path('/jquery/dist/jquery.slim.min.js');?>"></script>
-    <!--    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>-->
     <script src="<?php echo url_for('js/bootstrap.min.js')?>"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0">
     <link rel="stylesheet" href="<?php echo node_path('font-awesome/css/font-awesome.css')?>" />
@@ -18,7 +16,6 @@ if (!isset($is_access)){
     <link rel="stylesheet" href="<?php echo url_for('css/bootstrap.css')?>" />
     <link rel="stylesheet" href="<?php echo url_for('css/style.css')?>" />
 
-    <link rel="stylesheet" href="<?php echo url_for('css/login.css')?>" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;1,100&display=swap" rel="stylesheet">
@@ -27,8 +24,8 @@ if (!isset($is_access)){
 <body>
 <header class="header">
     <!-- As a link -->
-    <nav class="navbar navbar-light bg-secondary align-items-center p-0 m-0 ">
-        <p class="m-1 ml-lg-5  p-0 text-white"><i class="fa fa-phone"></i> +92 323 3508690</p>
+    <nav class="navbar  align-items-center navigation p-1 p-0 m-0 ">
+        <p class="m-1 ml-lg-5  p-0 text-white">Helpline:  <i class="fa fa-phone"></i> +92 306 8239715</p>
 
             <?php if(!isset($_SESSION['is_login'])){
             ?>
@@ -38,6 +35,8 @@ if (!isset($is_access)){
             </li>
             <li class="nav-item mr-lg-5">
             <a class="nav-link" href="<?php echo url_for('register/index.php');?>">Register</a>
+            </li><li class="nav-item mr-lg-5">
+            <a class="nav-link" href="<?php echo url_for('admin/index.php');?>">admin</a>
             </li>
                 </ul>
             <?php } ?>
@@ -59,15 +58,11 @@ if (!isset($is_access)){
 
 
     </nav>
-
-    <!-- As a heading -->
-
+        <div class="logo">
+            <img  class="logo-img center" src="<?php echo url_for('/images/logo.png');?>"></image>
+        </div>
     <nav class="navbar navbar-expand-lg sticky-top navigation">
-        <h3> <a class="navbar-brand ml-lg-5 mt-2" id="logo"
-                href="<?php echo url_for("/");?>"><?php echo ucwords("Tameer- e - watan public school mehrabpur")?>
-            </a
-            ></h3>
-        <button class="navbar-toggler " id="tab" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+        <button class="navbar-toggler left" id="tab" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
                 aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
            <span class="navbar-toggler-icon text-white">
                |||
@@ -75,35 +70,17 @@ if (!isset($is_access)){
         </button>
 
     <div class="collapse navbar-collapse align-content-center justify-content-center" id="navbarSupportedContent">
-        <ul class="navbar-nav ml-auto mr-lg-5">
+        <ul class="navbar-nav m-auto">
             <li class="nav-item active">
-                <a class="nav-link " href="#">Admission <span class="sr-only">(current)</span></a>
-            </li>
-            <li class="nav-item dropdown">
-                <a class="  dropdown-toggle nav-link " href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Courses
-                </a>
-                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href="#">1</a>
-                    <a class="dropdown-item" href="#">2</a>
-                    <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" href="#">3</a>
-                </div>
+                <a class="nav-link " href="#">Home <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
-                <a class="nav-link " href="#">About Us</a>
+                <a class="nav-link " href="#">Shop</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link " href="<?php echo url_for('contact_us/'); ?>">Contact Us</a>
+                <a class="nav-link " href="<?php echo url_for('shop/'); ?>">Contact Us</a>
             </li>
         </ul>
-<!-- right side navigation links-->
-<!--            <form class="form-inline ml-lg-auto my-2 my-lg-0">-->
-<!--                <div class="form-group">-->
-<!--                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">-->
-<!--                <button class="btn btn-outline-success " type="submit">Search</button>-->
-<!--                </div>-->
-<!--            </form>-->
     </div>
     </nav>
 </header>

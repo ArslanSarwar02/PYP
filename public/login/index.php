@@ -11,7 +11,7 @@ $title = "Login";
 ?>
 <html lang="en">
     <head>
-        <title>TWPS - <?php echo $title; ?></title>
+        <title>PYP - <?php echo $title; ?></title>
         <script src="<?php echo node_path('/jquery/dist/jquery.min.js');?>"></script>
         <script src="<?php echo node_path('@popperjs/core/dist/umd/popper.min.js');?>"></script>
         <script src="<?php echo url_for('js/bootstrap.min.js');?>"></script>
@@ -21,23 +21,24 @@ $title = "Login";
         <link rel="stylesheet" href="<?php echo url_for('css/login.css');?>">
     </head>
     <body>
-        <nav class="navbar navbar-expand-lg sticky-top navigation justify-content-center align-items-center">
-            <h3 class="mt-2"> <a class="navbar-brand ml-auto" id="logo" href="<?php echo url_for("/");?>"><?php echo ucwords("Tameer- e - watan public school mehrabpur")?></a></h3>
-            <ul class="navbar-nav">
-    <!--        <p>Already have an account? </p>-->
 
-            <li class="nav-item">
-                <a class="nav-link " href="<?php echo url_for('register');?>">Register</a>
-            </li>
-            </ul>
-        </nav>
-        <div class="signup-form">
+    <div class="logo">
+        <a href="<?php echo url_for('/');?>">
+
+            <img  class="logo-img center" src="<?php echo url_for('/images/logo.png');?>">
+        </a>
+    </div>
+    <div class="container-fluid">
+
+    </div>
+    <div class="signup-form">
             <form action="<?php echo $_SERVER['PHP_SELF'];?>" method="post">
 <!--                <img class="rounded-circle m-auto center form-logo" src="--><?php //echo url_for('images/logo.jpg');?><!--"/>-->
                 <br>
                 <h2 class="heading-bg-white">Sign In</h2>
-                <p class="hint-text">Sign-In. To access your account details.</p>
-
+                <p class="hint-text">Sign-In. To access your account details. or Register
+                    <a href="<?php echo url_for('register/index.php');?>">Register</a>
+                </p>
                 <?php if(isset($error['incorrect'])){?>
                     <div class="alert alert-danger alert-dismissible fade show text-center container mt-5" role="alert">
                     <?php echo $error['incorrect'];?>

@@ -15,12 +15,12 @@
         define('WWW',$root);
 
         //setting up directory path for using node modules
-        $node_string  = strpos($_SERVER['SCRIPT_NAME'],'/twps')+5;
+        $node_string  = strpos($_SERVER['SCRIPT_NAME'],'/pickyourpart')+13;
         $node_root    = substr($_SERVER['SCRIPT_NAME'],0,$node_string);
         define('NODE_PATH',$node_root.'/node_modules');
 
         //setting up directory path for admin directory
-        $admin_path     = strpos($_SERVER['SCRIPT_NAME'],'/twps')+5;
+        $admin_path     = strpos($_SERVER['SCRIPT_NAME'],'/pickyourpart')+13;
         $admin_sub_root = substr($_SERVER['SCRIPT_NAME'],0,$admin_path);
         define('ADMIN_ROOT',$admin_sub_root.'/admin');
 
