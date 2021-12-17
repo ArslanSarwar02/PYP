@@ -75,13 +75,13 @@ if (!isset($is_access)){
     <div class="collapse navbar-collapse align-content-center justify-content-center" id="navbarSupportedContent">
         <ul class="navbar-nav m-auto">
             <li class="nav-item active">
-                <a class="nav-link " href="#">Home <span class="sr-only">(current)</span></a>
+                <a class="nav-link " href="<?php echo url_for('/'); ?>"> Home</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link " href="#">Shop</a>
+                <a class="nav-link " href="<?php echo url_for('/shop'); ?>">Shop</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link " href="<?php echo url_for('shop/'); ?>">Contact Us</a>
+                <a class="nav-link " href="<?php echo url_for('/contact_us'); ?>">Contact Us</a>
             </li>
         </ul>
     </div>
