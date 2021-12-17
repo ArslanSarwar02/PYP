@@ -2,7 +2,7 @@ jQuery(function($) {
     var path = window.location.href;
     // because the 'href' property of the DOM element is the absolute path
     $('.sidebar a').each(function() {
-        if (this.href === path) {
+        if (this.href === path ) {
             $(this).addClass('active');
         }
     });

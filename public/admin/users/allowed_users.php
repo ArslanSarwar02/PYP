@@ -3,7 +3,7 @@
             require_once PRIVATE_PATH.'/db_config.php';
             //selecting user request with role
             $query = "select u.user_id , u.first_name , u.last_name, u.email ,r.role
-                                                        from user_requests u 
+                                                        from users u 
                                                        join role r on u.role_id=r.role_id  ";
             $stmt= $connection->prepare($query);
             $stmt->execute();
@@ -20,13 +20,7 @@
                         <td><?php echo $row['email'];?></td>
                         <td><?php echo $row['role'];?></td>
                         <td>
-                            <form class="form-horizontal d-inline" id="allow_users" >
-                                <input type="hidden" id="user_id" name="user_id" value="<?php echo $row['user_id'];?>">
-                                <input type="submit" name= "submit" value="Allow" class="btn btn-success" title="Delete">
-<!--                                <i class="fa fa-check"></i></input>-->
-                            </form>
-
-                            <a href="deny_user_request.php?id=<?php echo $row['user_id'];?>" class="btn btn-danger" title="Allow"><i class="fa fa-trash"></i></a>
+                            <a href="delete.php?id=<?php echo $row['user_id'];?>" class="btn btn-danger" title="Allow"><i class="fa fa-trash"></i></a>
                         </td>
                 </tr>
         <?php }

@@ -35,8 +35,6 @@ if (!isset($is_access)){
             </li>
             <li class="nav-item mr-lg-5">
             <a class="nav-link" href="<?php echo url_for('register/index.php');?>">Register</a>
-            </li><li class="nav-item mr-lg-5">
-            <a class="nav-link" href="<?php echo url_for('admin/index.php');?>">admin</a>
             </li>
                 </ul>
             <?php } ?>
@@ -53,6 +51,11 @@ if (!isset($is_access)){
                 <li class="nav-item mr-lg-5">
                     <a class="nav-link" href="<?php echo url_for('login/logout.php');?>">Logout</a>
                 </li>
+               <?php  if (isset($_SESSION['admin'])) {?>
+                <li class="nav-item mr-lg-5">
+                    <a class="nav-link" href="<?php echo url_for('admin/index.php');?>">Admin panel</a>
+                </li>
+                <?php } ?>
             </ul>
         <?php } ?>
 

@@ -13,10 +13,14 @@ include PUBLIC_PATH.'/includes/admin/admin_header.php';
 <!--    starting content of page-->
 <!-- Page content -->
 <div class="content">
-    <div>
-        <h2 class="text-success text-center">Pending User Requests</h2>
-    </div>
+
+        <h2 class="text-success text-center " id="head2">Pending User Requests</h2>
+
+<script  src="<?php echo url_for('js/allow_user.js'); ?>"></script>
     <div class="container">
+        <?php if(isset($_GET["success"])){
+            echo "<div class='alert alert-danger'> User request successfuly deleted</div>";
+        } ?>
         <div class="row">
             <div class="col-12">
                 <table class="table table-bordered">
@@ -37,6 +41,7 @@ include PUBLIC_PATH.'/includes/admin/admin_header.php';
                     </tbody>
                 </table>
             </div>
+            <div class="" id="user"></div>
         </div>
     </div>
 </div>

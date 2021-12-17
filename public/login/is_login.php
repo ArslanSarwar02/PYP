@@ -28,7 +28,7 @@ include_once '../includes/request_check.php';
     if(!isset($error['email']) && !isset($error['password'])) {
         require_once PRIVATE_PATH . '/db_config.php';
         $password = sha1($password);
-        $query = "SELECT email , password ,first_name ,last_name FROM users WHERE  email = ? AND password = ? limit 1";
+        $query = "SELECT email , password ,first_name ,last_name ,role_id FROM users WHERE  email = ? AND password = ? limit 1";
 // preparing query
         $stmt = $connection->prepare($query);
         $stmt->bind_param('ss', $email, $password);
@@ -40,6 +40,10 @@ include_once '../includes/request_check.php';
         }
         while ($row = $result->fetch_assoc()) {
             session_start();
+            if($row['role_id'] === 2){
+
+                $_SESSION['admin'] = true;
+            }
             $_SESSION['email'] = $row['email'];
             $_SESSION['username'] = $row['first_name'] ." ".$row['last_name'];
             $_SESSION['is_login'] = true;

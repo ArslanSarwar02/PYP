@@ -27,6 +27,7 @@
  box-shadow: 2px 2px 2px var(--background-color);
 
 }
+
 .logo > .logo-img{
 
     display: block;
@@ -72,6 +73,9 @@ div.content {
     padding: 1px 16px;
     /*height: 1000px;*/
     z-index:-1;
+}
+#head2{
+    overflow:hidden !important;
 }
 
 /* On screens that are less than 700px wide, make the sidebar into a topbar */
