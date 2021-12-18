@@ -4,7 +4,7 @@
             //selecting user request with role
             $query = "select u.user_id , u.first_name , u.last_name, u.email ,r.role
                                                         from users u 
-                                                       join role r on u.role_id=r.role_id  ";
+                                                       join role r on u.role_id=r.role_id order by u.user_id";
             $stmt= $connection->prepare($query);
             $stmt->execute();
             $result = $stmt->get_result();
@@ -20,7 +20,7 @@
                         <td><?php echo $row['email'];?></td>
                         <td><?php echo $row['role'];?></td>
                         <td>
-                            <a href="delete.php?id=<?php echo $row['user_id'];?>" class="btn btn-danger" title="Allow"><i class="fa fa-trash"></i></a>
+                            <a href="delete_user.php?id=<?php echo $row['user_id'];?>" class="btn btn-danger" title="Allow"><i class="fa fa-trash"></i></a>
                         </td>
                 </tr>
         <?php }

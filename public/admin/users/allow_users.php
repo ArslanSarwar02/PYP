@@ -3,7 +3,7 @@
 
 // if(isset($_POST['submit'])){
 
-     if(isset( $_POST['id'])){
+     if(isset( $_POST['id'] )&& !empty($_POST['id']) ){
 
      require_once PRIVATE_PATH.'/db_config.php';
          $fname =
@@ -40,7 +40,7 @@
          $deletestmt = $connection->prepare($delete_request);
          $deletestmt->bind_param('i', $us_id);
          if($deletestmt->execute()) {
-             echo "User successfully allowed to use services";
+             echo "<p>User successfully allowed to use services<p>";
 
          }
  }

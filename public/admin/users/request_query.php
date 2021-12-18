@@ -20,9 +20,9 @@
                         <td><?php echo $row['email'];?></td>
                         <td><?php echo $row['role'];?></td>
                         <td>
-                            <form class="form-horizontal d-inline" id="allow_users" >
+                            <form class="form-horizontal d-inline" >
                                 <input type="hidden" id="user_id" name="user_id" value="<?php echo $row['user_id'];?>">
-                                <input type="submit" name= "submit" value="Allow" class="btn btn-success" title="Delete">
+                                <input type="submit" id= "submit" value="Allow" class="btn btn-success" title="Delete">
 <!--                                <i class="fa fa-check"></i></input>-->
                             </form>
 

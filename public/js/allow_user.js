@@ -10,15 +10,15 @@ $(document).ready(function () {
             data: {id: id},
             success: function (data) {
                 console.log(data);
-                $('#user').append(data);
+                $("#success").append(data);
             }
         });
     }
 
-    $('#allow_users').submit(function (e) {
-        let id = $("#user_id").val();
+    $('#submit').on("click", function (e) {
         e.preventDefault();
-        allowUsers(id);
+        let id = $("#user_id").val();
+                allowUsers(id);
 
     });
 
