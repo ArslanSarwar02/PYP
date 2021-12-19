@@ -20,13 +20,13 @@
                         <td><?php echo $row['email'];?></td>
                         <td><?php echo $row['role'];?></td>
                         <td>
-                            <form class="form-horizontal d-inline" >
+                            <form class="form-horizontal d-inline" id="allow_users" method="POST" action="">
                                 <input type="hidden" id="user_id" name="user_id" value="<?php echo $row['user_id'];?>">
-                                <input type="submit" id= "submit" value="Allow" class="btn btn-success" title="Delete">
+                                <input type="submit" id= "submit" value="Allow" class="btn btn-success" title="Allow">
 <!--                                <i class="fa fa-check"></i></input>-->
                             </form>
 
-                            <a href="deny_user_request.php?id=<?php echo $row['user_id'];?>" class="btn btn-danger" title="Allow"><i class="fa fa-trash"></i></a>
+                            <a href="deny_user_request.php?id=<?php echo $row['user_id'];?>" class="btn btn-danger" title="Delete"><i class="fa fa-trash"></i></a>
                         </td>
                 </tr>
         <?php }

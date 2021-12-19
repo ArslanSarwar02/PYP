@@ -3,7 +3,7 @@
 
 // if(isset($_POST['submit'])){
 
-     if(isset( $_POST['id'] )&& !empty($_POST['id']) ){
+     if(isset( $_POST['id'] )&& !empty($_POST['id'])){
 
      require_once PRIVATE_PATH.'/db_config.php';
          $fname =
@@ -16,7 +16,7 @@
          $select = "SELECT * from user_requests where user_id = ?";
      $stmt =$connection->prepare($select);
      $stmt ->bind_param ('i', $_POST['id']);
-     $stmt ->execute();
+     if($stmt ->execute()){
      $result = $stmt->get_result();
      while ($row = $result->fetch_assoc()) {
          $us_id = $row['user_id'];
@@ -26,6 +26,8 @@
          $password = $row['password'];
          $confirm_password = $row['confirm_password'];
      }
+     }
+
      $stmt->close();
 
          $insert = "INSERT INTO users(first_name,last_name,email,password,confirm_password) VALUES(?,?,?,?,?)";

@@ -18,6 +18,8 @@
 }
 
 .logo {
+    z-index:1;
+    background-color: white;
     position:fixed;
     top:0;
     left:0;
@@ -72,7 +74,6 @@ div.content {
     margin-top: 100px;
     padding: 1px 16px;
     /*height: 1000px;*/
-    z-index:-1;
 }
 #head2{
     overflow:hidden !important;

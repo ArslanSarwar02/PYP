@@ -8,14 +8,14 @@ $(document).ready(function () {
             url: "allow_users.php",
             type: "POST",
             data: {id: id},
-            success: function (data) {
-                console.log(data);
-                $("#success").append(data);
+            success: function (response) {
+                console.log(response);
+                $("#success").append(response);
             }
         });
     }
 
-    $('#submit').on("click", function (e) {
+    $("#allow_users").on("submit", function (e) {
         e.preventDefault();
         let id = $("#user_id").val();
                 allowUsers(id);

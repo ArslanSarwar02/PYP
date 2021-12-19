@@ -20,7 +20,7 @@
                         <td><?php echo $row['email'];?></td>
                         <td><?php echo $row['role'];?></td>
                         <td>
-                            <a href="delete_user.php?id=<?php echo $row['user_id'];?>" class="btn btn-danger" title="Allow"><i class="fa fa-trash"></i></a>
+                            <a href="delete_user.php?id=<?php echo $row['user_id'];?>" class="btn btn-danger" title="Delete"><i class="fa fa-trash"></i></a>
                         </td>
                 </tr>
         <?php }
