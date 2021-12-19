@@ -52,11 +52,11 @@
             <i class="fa fa-user"> </i>
             Users
         </a>
-        <a href="#about">
+        <a href="#products">
             <i class="fa fa-product-hunt"></i>
             Products
         </a>
-        <a href="#about">
+        <a href="<?php echo url_for('login/logout.php');?>">
             <i class="fa fa-arrow-left"></i>
             Logout
         </a>
