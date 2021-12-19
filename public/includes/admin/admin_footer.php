@@ -1,4 +1,4 @@
-<footer class="fadeInBottomLeft">
+<footer class="">
 
 </footer>
 </body>
