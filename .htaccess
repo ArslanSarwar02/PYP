@@ -1,2 +1,2 @@
-RewriteEngine on
- DirectoryIndex public/index.php
+#RewriteEngine on
+# DirectoryIndex public/index.php
