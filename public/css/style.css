@@ -16,8 +16,7 @@
     box-sizing:border-box;
 }
 body{
-    overflow-x: hidden;
-    overflow-y: hidden;
+
 }
 .logo {
 justify-content:center;
